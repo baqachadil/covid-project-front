@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card" id="card">
+    <div class="row">
+      <b><p>Enter your image</p></b>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-2"></div>
+      <div class="card col-md-8" id="file">
+        <input
+          type="file"
+          class="file-input"
+          (change)="onFileSelected($event)"
+          #fileUpload
+        />
+
+        <div class="file-upload">
+          {{ fileName || "No file uploaded yet." }}
+
+          <button
+            mat-mini-fab
+            color="primary"
+            class="upload-btn"
+            (click)="fileUpload.click()"
+          >
+            <mat-icon>attach_file</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

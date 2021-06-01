@@ -1,0 +1,19 @@
+.container {
+  align-content: center;
+  text-align: center;
+}
+
+#card {
+  margin-top: 10%;
+  padding: 5%;
+}
+
+#type {
+  height: 200px;
+}
+
+#type:hover {
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+}
