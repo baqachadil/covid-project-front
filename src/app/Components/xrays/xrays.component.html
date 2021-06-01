@@ -6,25 +6,26 @@
     <div class="row" style="margin-top: 20px">
       <div class="col-md-2"></div>
       <div class="card col-md-8" id="file">
-        <input
-          type="file"
-          class="file-input"
-          (change)="onFileSelected($event)"
-          #fileUpload
-        />
-
-        <div class="file-upload">
-          {{ fileName || "No file uploaded yet." }}
-
-          <button
-            mat-mini-fab
-            color="primary"
-            class="upload-btn"
-            (click)="fileUpload.click()"
-          >
-            <mat-icon>attach_file</mat-icon>
-          </button>
-        </div>
+        <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <input
+              type="file"
+              name="image"
+              class="form-control fadeIn second"
+              placeholder="choose your image"
+              (change)="fileProgress($event)"
+            />
+          </div>
+          <div class="row">
+            <button
+              type="submit"
+              class="form-control btn btn-primary"
+              style="width: 100px; margin: auto; margin-top: 20px"
+            >
+              Upload
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

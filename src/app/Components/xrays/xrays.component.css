@@ -9,7 +9,8 @@
 }
 
 #file {
-  height: 100px;
+  padding: 1%;
+  align-items: center;
 }
 
 #type:hover {
