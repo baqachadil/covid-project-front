@@ -1,1 +1,118 @@
-<p>symptoms works!</p>
+<div class="container">
+  <div class="card" id="card">
+    <div class="row" style="text-align: center">
+      <b><p>Answer the following questions:</p></b>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-2"></div>
+      <div class="card col-md-8" id="file">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="row" style="padding: 2%">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+              <div style="margin-top: 4px">
+                <div><b>Caugh</b></div>
+                <input ngModel type="radio" value="yes" name="Caugh" />
+                <label for="yes">Yes</label>
+                <br />
+                <input ngModel type="radio" value="No" name="Caugh" />
+                <label for="No">No</label>
+              </div>
+              <div style="margin-top: 4px">
+                <div><b>Fever</b></div>
+                <input ngModel type="radio" value="yes" name="Fever" />
+                <label for="yes">Yes</label>
+                <br />
+                <input ngModel type="radio" value="No" name="Fever" />
+                <label for="No">No</label>
+              </div>
+              <div style="margin-top: 4px">
+                <div><b>Sore Throat</b></div>
+                <input ngModel type="radio" value="yes" name="Sthroat" />
+                <label for="yes">Yes</label>
+                <br />
+                <input ngModel type="radio" value="No" name="Sthroat" />
+                <label for="No">No</label>
+              </div>
+              <div style="margin-top: 4px">
+                <div><b>Shortness of breath</b></div>
+                <input ngModel type="radio" value="yes" name="Breath" />
+                <label for="yes">Yes</label>
+                <br />
+                <input ngModel type="radio" value="No" name="Breath" />
+                <label for="No">No</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div style="margin-top: 4px">
+                <div><b>Headache</b></div>
+                <input ngModel type="radio" value="yes" name="Headache" />
+                <label for="yes">Yes</label>
+                <br />
+                <input ngModel type="radio" value="No" name="Headache" />
+                <label for="No">No</label>
+              </div>
+              <div style="margin-top: 4px">
+                <div><b>Is you age > 60</b></div>
+                <input ngModel type="radio" value="yes" name="َAge" />
+                <label for="yes">Yes</label>
+                <br />
+                <input ngModel type="radio" value="No" name="Age" />
+                <label for="No">No</label>
+              </div>
+              <div style="margin-top: 4px">
+                <div><b>Gender</b></div>
+                <input ngModel type="radio" value="male" name="Gender" />
+                <label for="male">male</label>
+                <br />
+                <input ngModel type="radio" value="female" name="Gender" />
+                <label for="female">female</label>
+              </div>
+              <div style="margin-top: 4px">
+                <div><b>Test Indication</b></div>
+                <input ngModel type="radio" value="Abroad" name="Indication" />
+                <label for="Abroad">Abroad</label>
+                <br />
+                <input
+                  ngModel
+                  type="radio"
+                  value="Contact with confirmed"
+                  name="Indication"
+                />
+                <label for="Contact width confirmed"
+                  >Contact with confirmed</label
+                >
+                <br />
+                <input ngModel type="radio" value="Other" name="Indication" />
+                <label for="Other">Other</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <button
+              type="submit"
+              class="form-control btn btn-primary"
+              style="width: 100px; margin: auto; margin-top: 20px"
+            >
+              Submit
+            </button>
+          </div>
+          <div class="row" style="margin-top: 20px">
+            <div style="text-align: center">
+              <b><p style="display: inline">Result :</p></b>
+              <p
+                style="display: inline; margin-left: 2px"
+                [ngClass]="{
+                  pos: SymptomsResult == 'Positive',
+                  neg: SymptomsResult == 'Negative'
+                }"
+              >
+                {{ SymptomsResult }}
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.container {
+  align-content: center;
+}
+
+#card {
+  margin-top: 10%;
+  padding: 5%;
+}
+
+#file {
+  padding: 1%;
+}
+
+#type:hover {
+  cursor: pointer;
+  background-color: gray;
+  color: white;
+}
+
+.file-input {
+  display: none;
+}
+
+.pos {
+  color: red;
+}
+
+.neg {
+  color: goldenrod;
+}

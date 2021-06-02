@@ -22,3 +22,11 @@
 .file-input {
   display: none;
 }
+
+.pos {
+  color: red;
+}
+
+.neg {
+  color: goldenrod;
+}

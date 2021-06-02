@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { FormControl, FormGroup, NgForm, Validators } from "@angular/forms";
+import { XraysService } from "src/app/Services/xrays.service";
 
 @Component({
   selector: "app-xrays",
@@ -10,7 +9,9 @@ import { FormControl, FormGroup, NgForm, Validators } from "@angular/forms";
 export class XraysComponent implements OnInit {
   fileData: File = null;
 
-  constructor(private http: HttpClient) {}
+  XraysResult;
+
+  constructor(private service: XraysService) {}
 
   fileProgress(fileInput: any) {
     this.fileData = <File>fileInput.target.files[0];
@@ -20,6 +21,13 @@ export class XraysComponent implements OnInit {
   onSubmit() {
     let data: FormData = new FormData();
     data.append("image", this.fileData);
+
+    //displaying the imae Object
     console.log(this.fileData);
+
+    //sending the image to the XraysService and waiting for the response to show it in the interface
+    // this.service.sendXraysImg(data).subscribe(
+    //   res=> this.XraysResult = res.result
+    // )
   }
 }

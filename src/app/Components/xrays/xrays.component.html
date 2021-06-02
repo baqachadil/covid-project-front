@@ -25,6 +25,20 @@
               Upload
             </button>
           </div>
+          <div class="row" style="margin-top: 20px">
+            <div>
+              <b><p style="display: inline">Result :</p></b>
+              <p
+                style="display: inline; margin-left: 2px"
+                [ngClass]="{
+                  pos: XraysResult == 'Positive',
+                  neg: XraysResult == 'Negative'
+                }"
+              >
+                {{ XraysResult }}
+              </p>
+            </div>
+          </div>
         </form>
       </div>
     </div>
